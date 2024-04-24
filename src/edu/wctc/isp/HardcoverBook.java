@@ -25,11 +25,6 @@ public class HardcoverBook implements Book {
     }
 
     @Override
-    public String getArtist() {
-        return "";
-    }
-
-    @Override
     public String getAuthor() {
         return author;
     }
@@ -55,11 +50,6 @@ public class HardcoverBook implements Book {
     }
 
     @Override
-    public Duration getPlayingTime() {
-        return null;
-    }
-
-    @Override
     public int getQuantityOnHand() {
         return quantityOnHand;
     }
@@ -80,6 +70,11 @@ public class HardcoverBook implements Book {
             throw new IllegalArgumentException("Cannot order more than are on hand");
         }
         quantityOnHand -= quantity;
+    }
+
+    @Override
+    public void setCost(double v) {
+
     }
 
     @Override

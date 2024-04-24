@@ -1,8 +1,9 @@
 package edu.wctc.isp;
-
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -22,10 +23,19 @@ public class Main {
                 LocalDate.of(2011, Month.APRIL, 12),
                 "Miles Davis", Duration.ofMinutes(46));
 
-        System.out.println(book1.toString());
-        System.out.println("\n");
-        System.out.println(book2.toString());
-        System.out.println("\n");
-        System.out.println(record.toString());
+        List<Product> items = new ArrayList<>();
+        items.add(book1);
+        items.add(book2);
+        items.add(record);
+
+        for (Product p : items) {
+//            doubleCost(p);
+            System.out.println(p.toString());
+            System.out.println("\n");
+        }
     }
+
+//    public static void doubleCost(Product p) {
+//        p.setCost(p.getCost() * 2);
+//    }
 }

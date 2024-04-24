@@ -1,5 +1,4 @@
-package edu.wctc.isp.solution.part2;
-
+package edu.wctc.isp;
 import java.time.LocalDate;
 
 public interface Product {
@@ -17,4 +16,5 @@ public interface Product {
     void order(int quantity);
 
     void setCost(double v);
+
 }
